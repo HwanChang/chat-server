@@ -10,7 +10,7 @@ public class SocketController {
 
     @MessageMapping("/receive")
     @SendTo({"/topic/send"})
-    public SocketVO SocketHandler(SocketVO socketVO) {
+    public SocketVO socketHandler(SocketVO socketVO) {
         String userName = socketVO.getUserName();
         String content = socketVO.getContent();
 
